@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Echolight by Wiam Bahri!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a; /* أسود عميق */
+        }
+        .scary-gradient {
+            background: linear-gradient(135deg, #1a0000, #4a0000, #0a0a0a);
+        }
+        .scary-text {
+            color: #ff1a1a;
+            text-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-4">
+    <div class="bg-black scary-gradient rounded-3xl shadow-2xl p-8 md:p-12 max-w-2xl w-full text-center transform hover:scale-105 transition-transform duration-300 ease-in-out border-2 border-red-700">
+        <h1 class="text-4xl md:text-5xl font-extrabold scary-text mb-4 animate-pulse">
+            🕯️ لعبة Echolight 🕯️
+        </h1>
+        <p class="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed">
+            استعد للدخول إلى عالم غامض مليء بالرهبة في <span class="font-bold text-red-500">Echolight</span>،
+            حيث الأصوات تصبح طريقك والظلام عدوك. لعبة صنعتها <span class="font-bold text-red-500">وئام بحري</span> بحب وعاطفة، لتأخذك في تجربة لا تُنسى.
+        </p>
+
+        <div class="mb-8">
+            <img src="./freather.png" alt="Echolight Game Art" class="mx-auto rounded-xl shadow-lg border-4 border-red-700">
+        </div>
+
+        <p class="text-md md:text-lg text-gray-400 mb-8">
+            انقر على الزر أدناه لتنزيل اللعبة وبدء رحلتك عبر الظلام!
+        </p>
+
+        <a href="#" id="downloadButton" download="Echolight.apk" class="inline-block bg-red-700 hover:bg-red-800 text-white font-bold py-4 px-8 rounded-full shadow-lg text-xl md:text-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-red-400">
+            ⬇️ تنزيل Echolight APK ⬇️
+        </a>
+
+        <p class="text-sm text-gray-500 mt-8">
+            صُنعت بـ 🩸 من طرف وئام بحري.
+        </p>
+    </div>
+
+    <script>
+        document.getElementById('downloadButton').addEventListener('click', function(event) {
+            const apkDownloadLink = 'https://github.com/wiam-boop/echolight/releases/download/1.0.0/echolight.apk';
+            event.target.href = apkDownloadLink;
+            console.log('Attempting to download from:', apkDownloadLink);
+        });
+    </script>
+</body>
+</html>
